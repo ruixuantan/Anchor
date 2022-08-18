@@ -10,7 +10,8 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
   software-properties-common sudo curl vim \
   && apt-get install build-essential -y \
-  && apt-get install valgrind -y --no-install-recommends
+  && apt-get install valgrind -y --no-install-recommends \
+  && apt-get install git-all -y --no-install-recommends
 
 RUN mkdir -p /etc/sudoers.d \
   && groupadd -g ${GID} -o ${USERNAME} \
